@@ -38,8 +38,22 @@ section  { padding: 5rem 0; }
 
 
 
+/* 2. Common Styles 
+---------------- */
+.hero,
+.testimonials  {
+  width: 100%;
+  height: 80vh;
+  position: relative;
 
-/* 2. Header Styles
+  background-size: cover;
+}
+
+
+
+
+
+/* 3. Header Styles
 ------------------- */
 header  {
   width: 100%;
@@ -125,16 +139,11 @@ nav  {
 
 
 
-/* 3. Hero Section Styles
+/* 4. Hero Section Styles
 ------------------------- */
-.hero  {
-  width: 100%;
-  height: 80vh;
-  position: relative;
-
+.hero { 
   background: linear-gradient(135deg, rgba(49, 24, 131, .9) 0%, rgba(72, 56, 149, .8) 100%),
-              url('../images/header-bg.jpg');
-  background-size: cover;
+  url('../images/header-bg.jpg') center no-repeat;
 }
 
   .hero::before  {
@@ -188,7 +197,8 @@ nav  {
 
 
 
-/* 4. Experience Outdoors Section Styles */
+/* 5. Experience Outdoors Section Styles 
+---------------------------------------- */
 .experience-outdoors  { padding: 0; }
 
 
@@ -260,3 +270,64 @@ nav  {
 .hiking  { background: url('../images/hiking.jpg') center no-repeat; }
 
 .camping  { background: url('../images/camping.jpg') center no-repeat; }
+
+
+
+
+
+/* 6. Testimonials Section Styles
+--------------------------------- */
+.testimonials  {
+  background: linear-gradient(135deg, rgba(49, 24, 131, .9) 0%, rgba(72, 56, 149, .8) 100%),
+              url('../images/testimonials-bg.jpg') center no-repeat fixed;
+}
+
+  .testimonials::before  {
+    content: '';
+    background: url('../images/wave-small-reversed.png') center no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+  }
+
+
+.testimonial  {
+  width: 100%;
+  color: #fafafa;
+  text-align: center;
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.testimonial-textbox  {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+ .testimonial-textbox i  {
+   position: absolute;
+   top: -8rem;
+   left: 50%;
+   transform: translateX(-50%);
+
+   font-size: 8rem;
+   color: #eb648c;
+   opacity: .5;
+   z-index: -1;
+ }
+
+
+.testimonial-customer img  {
+  width: 10rem;
+  border-radius: 100%;
+  border: 3px solid #eb648c;
+}
